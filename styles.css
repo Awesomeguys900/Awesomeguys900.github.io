@@ -734,7 +734,7 @@ input[id="search"]{
 
 .textBox {
   width: calc(100% - 90px);
-  margin-left: 100px;
+  margin-left: 5px;
   color: white;
   font-family: 'Poppins' sans-serif;
 }
