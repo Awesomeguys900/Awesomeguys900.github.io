@@ -722,7 +722,7 @@ input[id="search"]{
  }
  
  .card-img {
-  --size: 100px;
+  --size: 150px;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
