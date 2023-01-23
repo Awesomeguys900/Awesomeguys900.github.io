@@ -701,61 +701,69 @@ input[id="search"]{
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 
+/*Magic card*/
 .card {
-  width: 100%;
-  max-width: 2000px;
-  height: 550px;
-  background: #353535;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  backdrop-filter: blur(10px);
-  transition: 0.5s ease-in-out;
-}
-
-.card:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-}
-
-.img {
   width: 500px;
-  height: 500px;
-  margin-left: 10px;
-  border-radius: 10px;
-  background-image: url("/Awesomeguys900.github.io/Awesomeguys900.github.io/pfp.jpg");
-}
-
-.card:hover > .img {
-  transition: 0.1s ease-in-out;
-  background-image: url("/Awesomeguys900.github.io/Awesomeguys900.github.io/pfp.jpg");
-}
-
-.textBox {
-  width: calc(100% - 90px);
-  margin-left: 5px;
-  color: white;
-  font-family: 'Poppins' sans-serif;
-}
-
-.textContent {
+  height: 300px;
+  background: #f5f5f5;
+  overflow: visible;
+  box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-
-.span {
-  font-size: 10px;
-}
-
-.h1 {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.p {
-  font-size: 17px;
-  font-weight: lighter;
-}
-
+ }
+ 
+ .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 0 1rem;
+ }
+ 
+ .card-img {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: #42caff;
+  background: linear-gradient(to bottom, #42caff 0%, #e81aff 100%);
+  position: relative;
+  transition: all .3s ease-in-out;
+ }
+ 
+ .card-img::before {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  border: 1rem solid #e8e8e8;
+ }
+ 
+ /*Text*/
+ .text-title {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: #42caff;
+  letter-spacing: 0.05rem;
+ }
+ 
+ .text-body {
+  font-size: .8em;
+  text-align: center;
+  color: #6f6d78;
+  font-weight: 400;
+  font-style: italic;
+ }
+ 
+ /*Hover*/
+ .card:hover .card-img {
+  --size: 110px;
+  width: var(--size);
+  height: var(--size);
+ }
