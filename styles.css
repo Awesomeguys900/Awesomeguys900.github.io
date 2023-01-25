@@ -807,3 +807,16 @@ html {
 
   }
 }
+
+
+html {
+  position: relative;
+  overflow-x: hidden!important;
+}
+
+
+@import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
+html,body{
+  height:100%
+  
+}
